@@ -106,8 +106,8 @@ export const useChatStore = () => {
         {
           role: 'model',
           text: isVisitor
-            ? `Bonjour ! Je suis **Ada**, votre assistante de révision. Pour que je puisse suivre votre progression, souhaitez-vous vous identifier ?\n\n[ ] Je veux bien me présenter\n[ ] Je préfère rester anonyme`
-            : `Ravi de vous retrouver pour une nouvelle session de révision, **${profile.name}** ! Sur quel point de Droit Public souhaitez-vous travailler aujourd'hui ?`,
+            ? `Bonjour ! Je suis **Ada**, l'assistante virtuelle du Professeur **Coulibaly**. Pour que je puisse suivre votre progression, souhaitez-vous vous identifier ?\n\n[ ] Je veux bien me présenter\n[ ] Je préfère rester anonyme`
+            : `Ravie de vous retrouver pour une nouvelle session formation ou de révision, **${profile.name}** ! Sur quel point du Droit administratif général souhaitez-vous travailler aujourd'hui ?`,
           timestamp: new Date()
         }
       ],
