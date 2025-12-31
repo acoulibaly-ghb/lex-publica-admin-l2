@@ -237,7 +237,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
 
     try {
       // Utilisation de fetch direct pour une structure de réponse garantie et robuste
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
       const contents = (activeSession?.messages || [])
         .filter(m => !m.isError)
@@ -564,6 +564,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
     </div>
   );
 };
+
 
 
 
