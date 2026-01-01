@@ -153,7 +153,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
           return;
         }
         // Sinon (c'est une question), on continue vers l'appel API avec le profil visiteur actif
-      } else if (text === "Je veux bien me présenter") {
+      } else if (text === "Je veux bien indiquer mon prénom ou mon pseudo") {
         addMessageToSession(activeSessionId, { role: 'user', text, timestamp: new Date() });
         setInput('');
         setIsLoading(true);
@@ -564,6 +564,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
     </div>
   );
 };
+
 
 
 
