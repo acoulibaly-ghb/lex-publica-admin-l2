@@ -2460,7 +2460,6 @@ Le cocontractant ne peut se prévaloir des manquements ou défaillances de l’a
  Exception :
 « Il est loisible aux parties de prévoir dans un contrat qui n’a pas pour objet l’exécution même du service public les conditions auxquelles le cocontractant de la personne publique peut résilier le contrat en cas de méconnaissance par cette dernière de ses obligations contractuelles […] » – CE, 8 octobre 2014, Société Grenke location.  
 
-
       B – L’influence des faits nouveaux
  Question : Que faut-il entendre par « faits nouveaux » ? 
  Réponse : On entend par « faits nouveaux » des événements ou des faits
@@ -2535,6 +2534,280 @@ On en sait les caractères en droit public :
 - et rendant absolument impossible l'exécution du contrat (irrésistibilité dans ses effets ; il ne s’agit pas d’une simple difficulté d’exécution). 
  Rappelons que le déficit permanent et définitif consécutif à une situation d’imprévision est assimilé à un cas de force majeure.
  La force majeure permet au cocontractant de demander au juge la résiliation du contrat. Les effets de la force majeure sont limités à la durée de l’événement.	
+
+
+--- DOCUMENT 5 : LES JUGES DE L'ACTION ADMINISTRATIVE ---
+
+Définition : Le principe de légalité, c’est le principe selon lequel l’autorité administrative doit toujours agir dans le respect de certaines règles.
+Définition : Le principe de la responsabilité, c’est le principe selon lequel si l’administration cause un dommage, elle doit le réparer.
+I - La typologie des juridictions administratives
+Il existe deux types de juridictions administratives :
+* des juridictions administratives à compétence générale
+* et des juridictions administratives à compétence spéciale.
+
+Question : Comment distingue-t-on les « juridictions administratives à compétence spéciale » et les « juridictions administratives à compétence générale » 
+Réponse : Une juridiction administrative à compétence spéciale est une juridiction qui ne tranche que des litiges limités à une matière, à un domaine spécial ou spécifique.
+Exemples : finances, asile, discipline professionnelle ou universitaire, etc.
+Une juridiction administrative à compétence générale est une juridiction qui a vocation à trancher tous les litiges relatifs à des activités ou actes auxquels s’applique le droit administratif.
+Exemples : service public à caractère administratif, police administrative, contrats administratifs, décisions administratives, etc.
+
+A - Les juridictions administratives à compétence spéciale ou juridictions administratives spécialisées
+Toutes les juridictions administratives à compétence spéciale ou juridictions administratives spécialisées sont rattachées juridiquement à l’ordre administratif :
+- elles sont placées sous le contrôle de cassation du Conseil d’État ;
+- elles officient dans le respect des règles générales de procédure ;
+- elles rendent la justice au nom de l’État (CE, sect., 27 février 2004, Mme Popin, n°217257)
+Faute de recensement officiel, le nombre des juridictions administratives à compétence spéciale reste indéterminé (de 25 à 40 selon les auteurs). Illustration d’une fluctuation permanente : au 1er janvier 2025, le Tribunal du stationnement payant a vu le jour tandis que disparaissaient d’autres juridictions administratives spécialisées, à savoir les juridictions de la tarification sanitaire et sociale.
+On peut tout de même citer comme juridictions administratives à compétence spéciale ou juridictions administratives spécialisées :
+1.les juridictions financières : la Cour des comptes et les chambres régionales et territoriales des comptes ;
+2. les juridictions disciplinaires : 
+- le Conseil supérieur de la magistrature (CSM) lorsqu’il statue comme conseil de discipline des magistrats du siège (CE, ass., 12 juillet 1969, L’Étang, n°72480)
+- le Conseil supérieur des tribunaux administratifs et des cours administratives d’appel (CSTACAA), statuant en matière disciplinaire ;
+- les instances disciplinaires de l’enseignement supérieur compétentes à l’égard des enseignants-chercheurs (pas des étudiants !) ;
+- les instances disciplinaires des ordres des professions réglementées : médecins, chirurgiens-dentistes, pharmaciens, architectes.
+
+B - Les juridictions administratives à compétence générale 
+Liste exhaustive des juridictions administratives à compétence générale :
+- le Conseil d’État,
+- 9 cours administratives d’appel
+- 42 tribunaux administratifs.
+
+1 - Le Conseil d’État
+Compétences (au sein de l’ordre juridictionnel administratif)
+Le Conseil d’État, dont les décisions ont pour dénomination officielle « décisions » et non « arrêts », est à la fois juge de premier ressort, juge d’appel et juge de cassation.
+1. Le Conseil d’État, juge de premier ressort et dernier ressort. Par exemple, le Conseil d’État statue en premier et dernier ressort sur
+a. les recours pour excès de pouvoir contre les décrets et ordonnances - avant la ratification de ces dernières, car après elles ont force de lois ;
+b. les recours pour excès de pouvoir contre les actes réglementaires des ministres ainsi que contre les actes administratifs des ministres qui sont pris obligatoirement après avis du Conseil d’État ;
+c. les recours en annulation dirigés contre les décisions administratives des organismes collégiaux à compétence nationale, etc.
+Environ 25 % des décisions du Conseil d’État sont rendues en premier et dernier ressort
+2. Le Conseil d’État, juge d’appel des jugements rendus par les tribunaux administratifs - compétence réduite par la loi du 31 décembre 1987, au profit des cours administratives d’appel. Il connaît de 
+a. l’appel des jugements rendus sur les recours en appréciation de légalité,  
+b. l’appel des jugements sur les litiges relatifs aux élections municipales et cantonales, 
+c. l’appel des décisions prises par le juge des référés ordonnant des mesures nécessaires à la sauvegarde d’une liberté fondamentale (référé-liberté).
+3. Le Conseil d’État, juge de cassation 
+a. à l’égard des cours administratives d’appel,
+b. à l’égard des juridictions administratives spécialisées,
+c. dans certains cas, à l’égard des tribunaux administratifs. 
+Exemples : 
+* redevance audiovisuelle,
+* demandes d’indemnités inférieures à 8 000 €, 
+* immeubles menaçant ruine,
+* situation individuelle des fonctionnaires ou agents de l’État, des collectivités territoriales, des établissements publics et de la Banque de France, sauf si la somme en jeu est supérieure à 8000 euros ou si le litige concerne l’entrée au service, la discipline et la sortie du service…
+Plus de 70 % des décisions du Conseil d’État relèvent de sa compétence de cassation.
+II - Le domaine de compétence des juridictions administratives 
+Définition : L’emprise, c’est l’occupation ou la dépossession temporaire ou définitive, partielle ou totale, d'une propriété immobilière privée, effectuée par une personne publique ou un entrepreneur de travaux publics.
+Quelle est la juridiction compétente en cas d’emprise irrégulière ? 
+Réponse : TC, 9 décembre 2013, Époux Panizzon c. Commune de Saint-Palais-sur-Mer, n°C3931.
+Si la dépossession est définitive, les juridictions judiciaires sont compétentes pour statuer sur les demandes tendant à l’indemnisation des dommages causés.
+Dans le cas contraire, ce sont les juridictions administratives qui ont compétence pour statuer sur tous les litiges liés à l’emprise, que celle-ci soit régulière ou irrégulière.
+
+Définition : Il y a voie de fait lorsque l’administration porte atteinte à la liberté individuelle ou provoque l’extinction d’un droit de propriété, soit par l'exécution forcée, dans des conditions irrégulières, d'une décision, même régulière, soit par l’édiction d’une décision manifestement insusceptible d'être rattachée à un pouvoir appartenant à l'autorité administrative.
+
+Cette définition nouvelle de la voie de fait a été donnée par TC, 17 juin 2013, M. Bergoend c/ Société ERDF Annecy Léman, n° C3911.
+Quelle est la juridiction compétente en cas voie de fait ? 
+Réponse : TC, 17 juin 2013, M. Bergoend c/ Société ERDF Annecy Léman, n° C3911.
+ En principe, les juridictions de l’ordre judiciaire sont compétentes.
+ Est également compétent le juge administratif du référé-liberté si deux conditions sont réunies : s’il y a à, la fois urgence et atteinte grave et manifestement illégale à une liberté fondamentale — CE, Ord., 23 janvier 2013, Commune de Chirongui, n°365262.
+**
+II - Le règlement des conflits de juridiction
+Un conflit de juridiction est un désaccord sur le point de savoir si c’est la juridiction administrative ou la juridiction judiciaire qui est compétente pour trancher un litige déterminé. 
+C’est le Tribunal des conflits qui est chargé de résoudre les conflits de juridiction ou de les prévenir
+A - Le conflit positif
+Définition : il y a conflit positif lorsque, malgré l’avis contraire du représentant de l’État dans le département (le préfet) ou la collectivité, une juridiction judiciaire estime avoir compétence pour trancher le litige dont elle a été saisie.
+Illustration :
+Une juridiction judiciaire s'apprête à statuer sur un litige impliquant une administration. 
+Le représentant de l’État (le préfet) estime que la juridiction judiciaire n’est pas compétente. Il va donc s'efforcer de dessaisir la juridiction judiciaire. 
+En cas de refus de la juridiction judiciaire, le préfet en appelle au Tribunal des conflits. On dit qu’il « élève le conflit ».
+Le Tribunal des conflits désignera la juridiction compétente.
+B - Le conflit négatif
+Définition : Il y a conflit négatif lorsque, successivement saisies du même litige, une juridiction de l’ordre administratif et une juridiction de l’ordre judiciaire se déclarent irrévocablement incompétentes, chacune estimant que le litige ressortit à la compétence d’une juridiction de l'autre ordre.
+Explication :
+Il s’agit d’une double déclaration d’incompétence. 
+Or le litige relève bien d’une juridiction de l'un des deux ordres ; donc, l’une des deux juridictions qui ont décliné leur compétence a tort.  
+Solution : les parties intéressées peuvent saisir le Tribunal des conflits d’une requête aux fins de désignation de la juridiction compétente. 
+Le Tribunal des conflits annulera la déclaration erronée d’incompétence et désignera ipso facto la juridiction compétente.
+C - Le conflit ou la contrariété de décisions au fond entraînant un déni de justice
+Définition : Il y a contrariété de décisions au fond lorsque, successivement saisies d’un litige portant sur le même objet, une juridiction de l’ordre administratif et une juridiction de l’ordre judiciaire se prononcent définitivement au fond, en rendant des décisions contradictoires qui déboutent, toutes les deux, le demandeur, et l’incitent, implicitement, à demander satisfaction à l’autre ordre de juridiction.
+Solution :
+En vertu de l’article 15 de la loi du 24 mai 1872 (article issu de la loi du 20 avril 1932), dans ce cas, le Tribunal des conflits se voit confier une mission particulière. Saisi par le requérant, il juge lui-même l'affaire au fond.
+Premier cas de ce genre : TC, 8 mai 1933, Rosay.
+III - Les litiges exclus du partage des compétences : Les actes de gouvernement
+Par « litiges exclus du partage » il faut entendre des litiges qui ne relèvent d’aucune juridiction. Ni des juridictions administratives, ni des juridictions judiciaires.
+Il s’agit des litiges relatifs à ce que l’on appelle des actes de gouvernement.
+A - Définition par recours au régime
+Définition : Un acte de gouvernement est un acte qui, bien qu’émanant d’une autorité du pouvoir exécutif, est insusceptible de tout recours juridictionnel direct ou indirect (devant le juge administratif ou le juge judiciaire).
+*
+On ne peut pas, en principe, obtenir réparation pour un préjudice causé par un acte de gouvernement (recours de plein contentieux ou de pleine juridiction irrecevable).
+*
+On ne peut pas demander l'annulation d'un acte de gouvernement (recours pour excès de pouvoir irrecevable).
+*
+Attention :
+Vous devez dire ou écrire acte « de » gouvernement. 
+Donc, vous ne devez ni dire ni écrire acte « du » gouvernement.
+B - Identification par énumération
+Voici les deux exemples d’actes de gouvernement que je vous suggère de retenir :
+* Le décret par lequel le Président de la République nomme le Premier ministre ;
+* Le décret par lequel le Président de la République fixe la composition du gouvernement.
+*
+III - L’exercice des attributions consultatives des juridictions administratives
+Les attributions administratives du Conseil d'État sont considérables, car nombreux sont les textes qui ne peuvent être, selon le cas, délibérés en conseil des ministres ou adoptés sans l’avis préalable du Conseil d’État :
+1. Les projets de loi (deuxième alinéa de l’article 39 de la Constitution). Le Conseil constitutionnel veille au respect de cette obligation qui implique que l'ensemble des questions posées par le texte adopté par le Conseil des ministres aient été soumises au Conseil d'État lors de sa consultation ;
+2. Les projets d’ordonnance (deuxième alinéa de l’article 38 de la Constitution) ;
+3.Les projets de décret modifiant des textes de forme législative intervenus dans le domaine réglementaire – second alinéa de l’article 37 de la Constitution. Ils ne peuvent être pris qu’après avis du Conseil d’État.
+Depuis la réforme issue de la loi constitutionnelle no 2008-724 du 23 juillet 2008, le Conseil d'État peut également être saisi pour avis d'une proposition de loi, et ce,  avant son passage en commission et à moins que son auteur ne s'y oppose.
+4. En application de l’article L112-1 alinéa 3 du CJA, le Conseil d’État donne son avis sur les projets de décret pour lesquels son intervention est prescrite par des dispositions législatives ou réglementaires. Ces textes sont dénommés « décrets en Conseil d’État » et leur visa comporte la mention « le Conseil d’État entendu ». Cette dénomination et cette mention marquent le caractère obligatoire en l’espèce de la consultation du Conseil d’État.
+Le défaut de saisine du Conseil d'État entraîne nécessairement l'illégalité des actes administratifs dont le projet devait lui être obligatoirement soumis – CE 17 juill. 2013, Syndicat national des professionnels de santé au travail, n°358109. Cette illégalité constitue un moyen d'ordre public que le juge administratif doit, le cas échéant, soulever d'office. 
+Quant aux décrets pris à la suite d’une consultation facultative du Conseil d'État, ils comportent la mention « Après avis du Conseil d'État ».
+
+
+*
+IV - L’exercice des attributions contentieuses des juridictions administratives 
+
+A - Les distinctions structurelles admises par la jurisprudence  
+Plusieurs types de recours peuvent être exercés devant les juridictions administratives.
+Ce qui différencie ces recours, c’est bien souvent les réponses aux deux questions suivantes :
+ Qu’est-ce que le requérant (c’est-à-dire l’auteur du recours, de la requête) demande au juge ? 
+ Est-ce que le recours doit être présenté par un avocat ? 
+Les réponses varient selon les recours.
+Prenons l’exemple des deux types de recours qui sont de loin les plus fréquents : le recours pour excès de pouvoir et le recours de pleine juridiction ou de plein contentieux.
+ 1. Le recours pour excès de pouvoir
+Définition : Le recours pour excès de pouvoir, c’est l’acte de procédure par lequel on saisit le juge administratif d'une demande tendant à l'annulation d’un acte administratif1 que l'on estime illégal.
+Chaque fois qu’un requérant se borne à demander au juge d’annuler un acte administratif, on conclut très souvent qu’il forme un recours pour excès de pouvoir.
+En principe, le requérant n’a pas l’obligation de s’attacher le ministère (les services) d’un avocat.
+ 2. Le recours de plein contentieux, appelé aussi recours de pleine juridiction
+Son exercice nécessite souvent que le requérant s’attache les services d’un avocat.
+C’est le type de recours que l’on forme dans les contentieux suivants :
+- contentieux de la responsabilité (cas où le requérant demande la réparation d’un dommage) ;
+- contentieux contractuel ;
+- contentieux électoral, etc.
+*
+B - Le règlement du contentieux administratif 
+
+1 - Les conditions de recevabilité des recours juridictionnels
+a - La règle de la décision préalable 
+L’article R.421-1 du code de justice administrative (CJA) dispose : « La juridiction ne peut être saisie que par voie de recours formé contre une décision, et ce, dans les deux mois à partir de la notification ou de la publication de la décision attaquée. »  
+C’est la règle de la décision préalable. 
+Elle signifie que tout requérant doit
+* soit attaquer une décision administrative prise spontanément par l’administration,
+* soit attaquer une décision administrative explicite ou implicite dont il a provoqué l’intervention en adressant une réclamation à l’administration.
+Pas décision prise par l’autorité administrative, pas de recours possible devant une juridiction administrative.
+Rappelons que c’est ce que l’on appelle la règle de la décision préalable.
+      La décision déférée au juge peut être explicite ou implicite, verbale ou écrite, négative ou positive. 
+      La règle de la décision préalable s'applique aussi bien au contentieux de l’excès de pouvoir qu'au contentieux de pleine juridiction. 
+      Son respect par le requérant ne pose aucun problème dans le cas du recours pour excès de pouvoir. En effet, ce recours vise à obtenir l'annulation d'une décision, qui, par définition, existe toujours - encore faut-il pouvoir la produire ou prouver son existence. 
+      Dans le cas du recours de pleine juridiction, notamment dans le cas d’un contentieux indemnitaire, son application est plus délicate.
+      Le second alinéa de l’article R.421-1 du code de justice administrative (CJA) dispose :  
+      « Lorsque la requête tend au paiement d'une somme d'argent, elle n'est recevable qu'après l'intervention de la décision prise par l'administration sur une demande préalablement formée devant elle. »
+       * Exemple : Un administré estime avoir subi un préjudice du fait de l'administration. Il souhaite en obtenir réparation. Avant de saisir le juge d'un recours de plein contentieux, la règle de la décision préalable l’incite à demander réparation à l'administration. Par une décision implicite ou explicite, l'administration se prononcera sur cette demande. Si cette décision ne satisfait pas l'administré, celui-ci pourra enfin saisir le juge - en principe, dans un délai de deux mois. On dit que par sa décision l'administration a lié le contentieux, c’est-à-dire qu’elle a rendu le litige effectif.
+ A noter : La dispense historique de la règle de la décision préalable qui existait pour les litiges de travaux publics a été supprimée, sauf cependant pour les recours dirigés contre une personne morale de droit privé qui n’est pas chargée d'une mission de service public administratif –  CE, Avis contentieux n° 44846, 27 avril 2021, Communauté de communes du Centre corse (4C).
+
+*
+b - La qualité et l'intérêt à agir
+      Pour saisir valablement le juge administratif, il faut justifier d’un intérêt à agir que ne confère pas la seule qualité de citoyen ou d’administré. 
+Écarter ce principe reviendrait à engorger les juridictions.
+* Définition : A intérêt à agir la personne à laquelle la décision litigieuse fait grief en une qualité reconnue par la jurisprudence comme permettant de former un recours.
+*
+c - La capacité et la représentation  
+  Le requérant doit avoir la capacité d’agir en justice ou être régulièrement représenté.
+   * Le ministère d’avocat est-il obligatoire ou facultatif 
+      La réponse à cette question est nuancée, étant entendu que, s'il y a obligation de constituer avocat pour le(s) requérant(s), la même obligation pèse sur le(s) défendeur(s)
+       Devant les tribunaux administratifs, c'est en fonction de l'objet de la requête que le ministère d'avocat est obligatoire ou facultatif.
+       Devant les cours administratives d'appel et devant le Conseil d'État, l'obligation d'être représenté par un avocat est la règle, atténuée au demeurant par des dérogations concernant notamment le contentieux de l’excès de pouvoir ou le contentieux électoral.
+   * Quels sont les avocats habilités à représenter les parties ? 
+      À nouveau, une réponse nuancée s’impose.
+       Devant les tribunaux administratifs et les cours administratives d'appel, les parties peuvent être représentées « soit par un avocat, soit par un avocat au Conseil d'État et à la Cour de cassation ».
+       Devant le Conseil d'État, seuls peuvent représenter les parties les avocats au Conseil d'État et à la Cour de cassation – que l’on appelle aussi « avocats au Conseil d'État » ou « avocats aux Conseils » et dont le nombre a été fixé à 64 par un arrêté du garde des Sceaux en date du 5 décembre 2016.
+*
+d - Le délai de recours   
+      En principe, le délai de recours est de deux mois – il existe toutefois des délais spéciaux plus courts ou plus longs.
+      Normalement, le délai est déclenché,
+* s’agissant des décisions implicites, par leur intervention.  
+* s’agissant des décisions explicites, par l'accomplissement de la mesure de publicité adéquate - publication ou affichage pour les actes réglementaires, notification pour les actes individuels. 
+**
+e - La présentation de la requête     
+      Par requête, il faut entendre – on l’aura deviné - le texte même du recours.
+* Contenu de la requête
+      La requête doit contenir tous les éléments nécessaires à la résolution du litige :
+* les conclusions, c’est-à-dire ce que le requérant demande exactement à la juridiction (l’annulation de la décision contestée, l’octroi de dommages et intérêts…). La juridiction ne peut statuer au-delà de ce qui lui est demandé2 (c’est la règle non ultra petita) ;
+* l’exposé précis des faits ;
+* les moyens de droit, autrement dit les arguments juridiques tendant à établir le bien-fondé de la demande (des conclusions). Par exemple, le requérant doit démontrer que l’acte attaqué est illégal et pas seulement qu’il lui est défavorable.
+**
+f - La suspension accessoire et éventuelle de la décision litigieuse
+Facultatif, Voir version PDF complète du cours si intéressé(e)
+**
+2 - Le règlement du litige  
+     Ici, règlement signifie : le fait de régler, c’est-à-dire de trancher le litige.
+a - L'instruction 
+      Devant le juge administratif, la procédure présente trois traits principaux : 
+1. Elle est écrite : elle se fait au vu des mémoires déposés par les parties. 
+2. Elle est inquisitoire (ou inquisitoriale), c'est-à-dire dirigée par le juge. 
+3. Elle est contradictoire : une affaire n'est pas régulièrement jugée
+* si une partie n'a pas été à même de connaître et de discuter les documents produits par son adversaire ou 
+* si le juge a statué sur le vu de pièces dont il aurait eu seul connaissance.
+**
+b – La charge de la preuve
+      En vertu des règles gouvernant la dévolution de la charge de la preuve devant le juge administratif, applicables sauf loi contraire, il incombe, en principe, à chaque partie d’établir les faits qu’elle invoque au soutien de ses prétentions - CE, 3 décembre 2010, Danjon, n° 332204.
+*
+c - La décision du juge 
+      La dénomination de la décision du juge est variable :  
+* Conseil d’État : décision ou arrêt, sachant que les membres du Conseil d’État disent toujours « Décision » ; 
+* Cours administratives d’appel : arrêt ; 
+* Tribunaux administratifs : jugement.
+      Les ordonnances sont des décisions prises dans le cadre de procédures spéciales, aussi bien par le Conseil d’État, par les cours administratives d’appel que par les tribunaux administratifs.
+C – Les procédures de référé : Les référés d’urgence
+Une procédure de référé est une voie de droit accélérée, « parallèle » à un recours exercé au fond ou susceptible de l’être, permettant d’obtenir du juge le prononcé de mesures provisoires.
+Le juge des référés statue par des mesures qui présentent un caractère provisoire. Il n'est pas saisi du principal et se prononce dans les meilleurs délais.
+Sont juges des référés les présidents des tribunaux administratifs et des cours administratives d'appel ainsi que les magistrats qu'ils désignent à cet effet et qui, sauf absence ou empêchement, ont une ancienneté minimale de deux ans et ont atteint au moins le grade de premier conseiller. 
+?Pour les litiges relevant de la compétence du Conseil d'État, sont juges des référés le président de la section du contentieux ainsi que les conseillers d'État qu'il désigne à cet effet.
+Il existe un grand nombre de référés, mais nous nous attacherons à en présenter sommairement deux qui ont en commun deux particularités.
+Premièrement, ils sont de droit commun, c’est-à-dire susceptibles de s’appliquer en tout domaine). 
+Deuxièmement, ils sont assujettis à une condition d’urgence.
+Seront successivement présentés :
+- le référé-suspension,
+- et le référé-liberté.
+1. Le référé-suspension
+L’article L. 521-1 du code de justice administrative, issu de la loi du 30 juin 2000, dispose :
+« Quand une décision administrative, même de rejet, fait l'objet d'une requête en annulation ou en réformation, le juge des référés, saisi d'une demande en ce sens, peut ordonner la suspension de l'exécution de cette décision, ou de certains de ses effets, lorsque l'urgence le justifie et qu'il est fait état d'un moyen propre à créer, en l'état de l'instruction, un doute sérieux quant à la légalité de la décision. »
+Ces dispositions énoncent une condition de procédure et deux conditions de fond devant être réunies pour obtenir l’intervention du juge du référé-suspension :
+a. La condition de procédure : la présentation d’une requête en annulation ou en réformation
+Pour pouvoir saisir valablement le juge du référé-suspension, le requérant doit, avant tout, saisir le juge du fond, juge du principal, d’une requête visant à obtenir l’annulation ou la réformation de la décision administrative litigieuse.
+Ensuite, le requérant pourra, avant que le juge du fond ne se prononce sur l’annulation ou la réformation, saisir le juge des référés tendant à obtenir la suspension de la décision contestée.
+b. Les deux conditions de fond
+Le juge des référés peut ordonner la suspension de la décision litigieuse ou de certains de ses effets si deux conditions sont cumulativement :
+- l’urgence à suspendre (a) ; 
+- l’existence d’un « doute sérieux quant à la légalité de la décision » (b).
+a. L’urgence à suspendre
+Il y a urgence à suspendre, lorsque la décision produit des conséquences négatives, plus précisément lorsqu’elle « préjudicie de manière suffisamment grave et immédiate à un intérêt public, à la situation du requérant ou aux intérêts qu’il entend défendre » - Critères dégagés dans la décision CE, sect., 19 janvier 2001, Confédération nationale des Radios libres, nº 228815.
+b. L’existence d’un « doute sérieux quant à la légalité de la décision
+Le requérant doit invoquer un « moyen propre à créer, en l’état de l’instruction, un doute sérieux quant à la légalité de la décision » 
+Le juge du référé-suspension se contente, pour décider de 
+Suspendre, d’une très probable illégalité.
+Les conditions relatives à l’urgence et au doute sérieux sont autonomes : le fait que la décision paraisse illégale n’est pas de nature à caractériser, par elle-même, une situation d’urgence 2366. Il n’en va pas de même, toutefois, de l’illégalité que constitue la méconnaissance d’une décision de justice qui, à la fois, fait sérieusement douter de la légalité de la décision litigieuse et caractérise une situation d’urgence.
+2. Le référé-liberté
+L’article L. 521-2 du code de justice administrative, issu de la loi du 30 juin 2000, dispose :
+« Saisi d'une demande en ce sens justifiée par l'urgence, le juge des référés peut ordonner toutes mesures nécessaires à la sauvegarde d'une liberté fondamentale à laquelle une personne morale de droit public ou un organisme de droit privé chargé de la gestion d'un service public aurait porté, dans l'exercice d'un de ses pouvoirs, une atteinte grave et manifestement illégale. Le juge des référés se prononce dans un délai de quarante-huit heures. »
+L’intervention du juge du référé-liberté est subordonnée à trois conditions qui seront ci-dessous exposées.
+a. Une atteinte grave à un liberté fondamentale
+Question : Qu’est-ce qu’une liberté fondamentale au sens de l’article L. 521-2 du code de justice administrative (CJA) ?
+Réponse : Le législateur n’ayant pas dressé la liste des libertés fondamentales qui font l’objet de la protection de l’article L. 521-2 du CJA, c’est au juge administratif qu’est revenu le soin de l’établir.
+Parmi les 39 libertés fondamentales reconnues par le Conseil d’État, on peut citer :
+- la liberté d'aller et venir,
+- la liberté d'expression des courants de pensée et d'opinion,
+- le droit de propriété,
+- la liberté d'entreprendre, la liberté du commerce et de l'industrie et la liberté contractuelle,
+- le droit de se marier,
+- le Droit de grève et la liberté syndicale, etc.
+Les droits et libertés érigés au rang de « liberté fondamentale » sont quasiment tous reconnus par la Constitution. Cela ne signifie pas pour autant que tous les droits et libertés énoncés par la Constitution acquièrent le statut de « liberté fondamentale » au sens de l’article L. 521-2 du code.
+C’est ainsi que le principe d’égalité se voit dénier le statut de liberté fondamentale — CE, 1er septembre 2017, Commune de Dannemarie, nº 413607. Dans cette dernière décision, le Conseil d’État précise cependant que certaines discriminations peuvent constituer des atteintes à une liberté fondamentale.
+
+b. Une atteinte manifestement illégale
+L’atteinte portée à la liberté invoquée doit provenir directement d’une décision, d’un agissement positif ou d’une carence dont l’illégalité est « manifeste ». 
+Le juge du référé-liberté n’intervient ainsi que si l’illégalité ne prête pas à discussion (ce qu’il peut vérifier en se demandant si cette illégalité serait admise par tous les membres d’une formation collégiale — CE, 14 mars 2011, Commune de Galluis, nº 347345).
+
+c. L’urgence à faire cesser cette atteinte 
+Comme en matière de référé-suspension (et de référé-mesures utiles), le juge du référé-liberté n’intervient qu’en cas d’urgence. 
+Toutefois, sur le terrain du référé-liberté, la condition est appréciée avec une plus grande sévérité : « la circonstance que la condition d’urgence au sens de l’article L. 521-1 soit remplie ne suffit pas, en l’absence de circonstances particulières, à caractériser une situation d’urgence au sens de l’article L. 521-2 » — CE, 6 juin 2006, Koubi, nº 293935.
+Parce qu’il doit remédier à une atteinte grave à une liberté fondamentale, le juge du référé-liberté dispose d’une large palette de pouvoirs. Il peut ordonner, au besoin d’office, « toutes mesures nécessaires à la sauvegarde » de la liberté affectée : suspendre une décision ou prononcer des injonctions, etc.
+
 `;
 
 export const SYSTEM_INSTRUCTION = `
@@ -2886,6 +3159,7 @@ INTERDICTION :
 - Ne donnez pas de références d'arrêts détaillées (réservé au chat textuel)
 
 `;
+
 
 
 
