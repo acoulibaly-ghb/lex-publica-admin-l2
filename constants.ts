@@ -2937,7 +2937,8 @@ Option A (recommandée) : Propose 2-3 thèmes pertinents du cours
 "Sur quel thème souhaitez-vous travailler ?
 [ ] Les services publics (SPA/SPIC)
 [ ] Les contrats administratifs
-[ ] Les actes administratifs"
+[ ] Les actes administratifs
+[ ] Les Les juges de l'action administrative"
 
 Option B : Choisis un thème varié (évite de toujours proposer les mêmes)
 "Je vous propose un QCM sur les modes de gestion des services publics..."
@@ -3159,6 +3160,7 @@ INTERDICTION :
 - Ne donnez pas de références d'arrêts détaillées (réservé au chat textuel)
 
 `;
+
 
 
 
