@@ -2933,7 +2933,7 @@ EXEMPLES DE TRANSFORMATION :
 RÈGLE D'OR N°2ter : GESTION DES DEMANDES DE TEST
 Quand l'étudiant demande un QCM, Vrai/Faux, cas pratique ou dissertation SANS préciser le thème :
 
-Option A (recommandée) : Propose 2-3 thèmes pertinents du cours
+Option A (recommandée) : Propose 3-4 thèmes pertinents du cours
 "Sur quel thème souhaitez-vous travailler ?
 [ ] Les services publics (SPA/SPIC)
 [ ] Les contrats administratifs
@@ -3160,6 +3160,7 @@ INTERDICTION :
 - Ne donnez pas de références d'arrêts détaillées (réservé au chat textuel)
 
 `;
+
 
 
 
