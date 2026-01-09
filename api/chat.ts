@@ -89,6 +89,9 @@ export default async function handler(req: any, res: any) {
 
     } catch (error: any) {
         console.error("❌ Erreur Backend Chat:", error);
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({
+            error: error.message || "Erreur interne",
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+        });
     }
 }
