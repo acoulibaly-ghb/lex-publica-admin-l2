@@ -248,17 +248,21 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          // On envoie l'historique et le profil. 
-          // Le serveur s'occupe de la clé API et du cache (le cours complet) !
-          messages: activeSession?.messages || [],
+          messages: (activeSession?.messages || []).filter(m => !m.isError),
           currentProfile: currentProfile,
         })
       });
 
-      const data = await response.json();
+      const responseText = await response.text();
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (e) {
+        throw new Error(`Le serveur a renvoyé une réponse invalide (Code ${response.status}). Détails : ${responseText.substring(0, 150)}...`);
+      }
 
       if (!response.ok) {
-        throw new Error(data.error || "Erreur serveur");
+        throw new Error(data.error || `Erreur serveur ${response.status}`);
       }
 
       const aiText = data.text || "Désolée, je n'ai pas pu générer de réponse.";
