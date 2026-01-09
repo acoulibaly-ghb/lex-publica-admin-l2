@@ -5,7 +5,7 @@ import {
   FileText, Paperclip, Trash2, BookOpen, Scale,
   FileSignature, CheckCircle2, Circle, Trophy, LogOut, Search
 } from 'lucide-react';
-// On a supprimé l'import de @google/genai car le frontend ne parle plus directement à Google
+// On a supprim� l'import de @google/genai car le frontend ne parle plus directement � Google
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
@@ -37,7 +37,7 @@ const MermaidRenderer: React.FC<{ chart: string }> = ({ chart }) => {
 };
 
 interface TextChatProps {
-  courseContent: string; // Gardé pour compatibilité, mais géré par le serveur maintenant
+  courseContent: string; // Gard� pour compatibilit�, mais g�r� par le serveur maintenant
   systemInstruction: string; // Idem
   apiKey: string; // Idem
   themeColor?: string;
@@ -156,7 +156,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
           }, 600);
           return;
         }
-      } else if (text === "Je veux bien indiquer le prénom ou le pseudo de mon choix") {
+      } else if (text === "Je veux bien indiquer le prénom ou le pseudo de mon choix" || text === "Je veux bien me présenter") {
         addMessageToSession(activeSessionId, { role: 'user', text, timestamp: new Date() });
         setInput('');
         setIsLoading(true);
@@ -440,7 +440,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
           <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-slate-50 dark:from-slate-800/30 dark:to-slate-900/30 rounded-xl border border-blue-100 dark:border-slate-700">
             <p className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
               <Lightbulb size={16} className="inline mr-2 text-amber-500" />
-              Cette r�ponse contient plus de d�tails. Voulez-vous les voir ?
+              Cette réponse contient plus de détails. Voulez-vous les voir ?
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
@@ -448,13 +448,13 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
                 className="flex-1 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2"
               >
                 <CheckCircle2 size={18} />
-                {choiceOptions[0] || "Oui, voir tous les d�tails"}
+                {choiceOptions[0] || "Oui, voir tous les détails"}
               </button>
               <button
                 onClick={() => {
                   addMessageToSession(activeSessionId!, {
                     role: 'model',
-                    text: "Tr�s bien ! N'h�sitez pas � demander plus de pr�cisions si besoin.",
+                    text: "Très bien ! N'hésitez pas à demander plus de précisions si besoin.",
                     timestamp: new Date()
                   });
                 }}
@@ -473,7 +473,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
             className="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center gap-1"
           >
             <PanelLeftClose size={14} />
-            R�duire la r�ponse
+            Réduire la réponse
           </button>
         )}
 
@@ -483,14 +483,14 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
               if (checkedOptions.length > 0) {
                 const combined = checkedOptions.join(', ');
                 selectOptionsInMessage(activeSessionId!, msgIndex, checkedOptions);
-                sendMessage(`Mes r�ponses : ${combined}`);
+                sendMessage(`Mes réponses : ${combined}`);
               }
             }}
             disabled={isLoading || checkedOptions.length === 0}
             className={`mt-2 flex items-center justify-center gap-2 px-6 py-3 ${colors.primary} text-white rounded-xl font-bold shadow-lg transition-all active:scale-95 disabled:opacity-50`}
           >
             <CheckCircle2 size={18} />
-            <span>Valider mes r�ponses</span>
+            <span>Valider mes réponses</span>
           </button>
         )}
       </div>
@@ -622,8 +622,8 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
             </div>
             <div className="p-6 overflow-y-auto space-y-6 text-sm text-slate-600 dark:text-slate-400">
               <section className="space-y-2">
-                <h4 className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2"><User size={18} className={colors.text} /> Identification pr�cise</h4>
-                <p>En cas d'homonymes (ex: deux "Thomas"), Ada affichera les codes uniques pour que chacun retrouve ses propres notes de r�vision.</p>
+                <h4 className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2"><User size={18} className={colors.text} /> Identification précise</h4>
+                <p>En cas d'homonymes (ex: deux "Thomas"), Ada affichera les codes uniques pour que chacun retrouve ses propres notes de révision.</p>
               </section>
             </div>
           </div>
@@ -631,6 +631,4 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
       )}
     </div>
   );
-
 };
-
