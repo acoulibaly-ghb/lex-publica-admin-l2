@@ -1,6 +1,4 @@
-import { GoogleAICacheManager } from "@google/generative-ai/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import { SYSTEM_INSTRUCTION, DEFAULT_COURSE_CONTENT } from "../constants";
+// Imports dynamiques à l'intérieur du handler pour alléger le démarrage
 
 // CONFIGURATION KV (Via fetch pour éviter les problèmes de bundle)
 const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || process.env.STORAGE_REST_API_URL;
@@ -17,97 +15,94 @@ export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
     if (!apiKey) return res.status(500).json({ error: 'Clé API manquante ou invalide dans Vercel' });
 
+    // Timeout guard pour éviter le crash brutal de Vercel après 10s
+    const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error("Timeout préventif (9s) : Le serveur a mis trop de temps à s'initialiser. Veuillez réessayer dans quelques secondes.")), 9000);
+    });
+
     try {
-        const { messages, currentProfile } = req.body;
-        let cacheName = null;
-
-        // 1. GESTION DU CACHE VIA KV (FETCH)
-        if (kvUrl && kvToken) {
-            try {
-                const kvRes = await fetch(`${kvUrl}/get/${cacheKey}`, { headers: { Authorization: `Bearer ${kvToken}` } });
-                const kvData = await kvRes.json();
-                const cachedInfo = kvData.result ? (typeof kvData.result === 'string' ? JSON.parse(kvData.result) : kvData.result) : null;
-
-                if (cachedInfo && Date.now() < cachedInfo.expiry - (60 * 1000)) {
-                    cacheName = cachedInfo.name;
-                    console.log(`⚡ Cache retrouvé via KV : ${cacheName}`);
-                }
-            } catch (e) { console.error("⚠️ KV Error:", e); }
-        }
-
-        // 2. (RE)CRÉATION DU CACHE SI NÉCESSAIRE
-        if (!cacheName) {
-            try {
-                console.log("🔄 Génération d'un nouveau Cache Contextuel...");
-                const cacheManager = new GoogleAICacheManager(apiKey);
-
-                // Note : On inclut les instructions système dans le cache car certains modèles n'acceptent pas 
-                // de systemInstruction séparé quand on utilise un cache.
-                const combinedContext = `INSTRUCTIONS SYSTÈME :\n${SYSTEM_INSTRUCTION}\n\nCOURS DE RÉFÉRENCE :\n${DEFAULT_COURSE_CONTENT}`;
-
-                const newCache = await cacheManager.create({
-                    model: "models/gemini-1.5-flash-001",
-                    displayName: `cache_${prefix || 'default'}`,
-                    ttlSeconds: 3600, // 1 heure
-                    contents: [{ role: "user", parts: [{ text: combinedContext }] }],
-                });
-
-                cacheName = newCache.name;
-                const expiry = new Date(newCache.expireTime).getTime();
-
-                // Sauvegarde dans KV
-                if (kvUrl && kvToken) {
-                    await fetch(`${kvUrl}/set/${cacheKey}`, {
-                        method: 'POST',
-                        headers: { Authorization: `Bearer ${kvToken}` },
-                        body: JSON.stringify({ name: cacheName, expiry })
-                    });
-                }
-            } catch (cacheError: any) {
-                console.error("❌ Cache Creation Error:", cacheError);
-                return res.status(500).json({ error: `Échec création cache: ${cacheError.message}` });
-            }
-        }
-
-        // 3. GÉNÉRATION DE LA RÉPONSE
-        try {
-            const genAI = new GoogleGenerativeAI(apiKey);
-
-            // SYNTAXE CORRECTE : getGenerativeModelFromCachedContent
-            const model = genAI.getGenerativeModelFromCachedContent(cacheName);
-
-            // Contexte étudiant injecté dans le premier message utilisateur pour la session
-            const studentContext = currentProfile
-                ? `[CONTEXTE ÉTUDIANT : ${currentProfile.name} (ID: ${currentProfile.id}). SCORES : ${JSON.stringify(currentProfile.scores)}]\n\n`
-                : "";
-
-            const history = (messages || [])
-                .filter((m: any) => !m.isError && m.text && m.text.trim() !== "")
-                .slice(-6) // On limite l'historique pour rester léger
-                .map((m: any) => ({
-                    role: m.role === 'model' ? 'model' : 'user',
-                    parts: [{ text: m.text }]
-                }));
-
-            const lastMsg = history.pop();
-            if (!lastMsg) return res.status(400).json({ error: "Aucun message utilisateur." });
-
-            // Si c'est le début de la conversation, on ajoute le contexte étudiant
-            const finalUserInput = history.length === 0 ? studentContext + lastMsg.parts[0].text : lastMsg.parts[0].text;
-
-            const chat = model.startChat({
-                history: history,
-            });
-
-            const result = await chat.sendMessage(finalUserInput);
-            return res.status(200).json({ text: result.response.text() });
-        } catch (aiError: any) {
-            console.error("❌ AI Error:", aiError);
-            return res.status(500).json({ error: `Erreur IA : ${aiError.message}` });
-        }
-
-    } catch (globalError: any) {
-        console.error("❌ Global Error:", globalError);
-        return res.status(500).json({ error: `Erreur interne : ${globalError.message}` });
+        const result = await Promise.race([
+            processRequest(req),
+            timeoutPromise
+        ]);
+        return res.status(200).json(result);
+    } catch (error: any) {
+        console.error("❌ Erreur Chat:", error.message);
+        const isTimeout = error.message.includes("Timeout");
+        return res.status(isTimeout ? 200 : 500).json({
+            error: error.message,
+            status: isTimeout ? "WARMING_UP" : "ERROR"
+        });
     }
+}
+
+async function processRequest(req: any) {
+    const { messages, currentProfile } = req.body;
+    const { SYSTEM_INSTRUCTION, DEFAULT_COURSE_CONTENT } = await import("../constants");
+    let cacheName = null;
+
+    // 1. KV CHECK
+    if (kvUrl && kvToken) {
+        try {
+            const kvRes = await fetch(`${kvUrl}/get/${cacheKey}`, { headers: { Authorization: `Bearer ${kvToken}` } });
+            const kvData = await kvRes.json();
+            const cachedInfo = kvData.result ? (typeof kvData.result === 'string' ? JSON.parse(kvData.result) : kvData.result) : null;
+            if (cachedInfo && Date.now() < cachedInfo.expiry - (60 * 1000)) {
+                cacheName = cachedInfo.name;
+            }
+        } catch (e) { console.error("KV Error:", e); }
+    }
+
+    // 2. CACHE CREATION (DYNAMIC IMPORT)
+    if (!cacheName) {
+        const { GoogleAICacheManager } = await import("@google/generative-ai/server");
+        const cacheManager = new GoogleAICacheManager(apiKey);
+
+        // On évite la grosse concaténation si possible ou on la fait juste une fois
+        const combined = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}`;
+
+        const newCache = await cacheManager.create({
+            model: "models/gemini-1.5-flash-001",
+            displayName: `cache_${prefix || 'default'}`,
+            ttlSeconds: 3600,
+            contents: [{ role: "user", parts: [{ text: combined }] }],
+        });
+
+        cacheName = newCache.name;
+        const expiry = new Date(newCache.expireTime).getTime();
+
+        if (kvUrl && kvToken) {
+            await fetch(`${kvUrl}/set/${cacheKey}`, {
+                method: 'POST',
+                headers: { Authorization: `Bearer ${kvToken}` },
+                body: JSON.stringify({ name: cacheName, expiry })
+            });
+        }
+    }
+
+    // 3. AI RESPONSE
+    const { GoogleGenerativeAI } = await import("@google/generative-ai");
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModelFromCachedContent(cacheName);
+
+    const studentInfo = currentProfile
+        ? `[ÉTUDIANT : ${currentProfile.name} (ID: ${currentProfile.id})]\n`
+        : "";
+
+    const history = (messages || [])
+        .filter((m: any) => !m.isError && m.text && m.text.trim() !== "")
+        .slice(-6)
+        .map((m: any) => ({
+            role: m.role === 'model' ? 'model' : 'user',
+            parts: [{ text: m.text }]
+        }));
+
+    const lastMsg = history.pop();
+    if (!lastMsg) throw new Error("Aucun message utilisateur.");
+
+    const input = history.length === 0 ? studentInfo + lastMsg.parts[0].text : lastMsg.parts[0].text;
+    const chat = model.startChat({ history });
+    const aiRes = await chat.sendMessage(input);
+
+    return { text: aiRes.response.text() };
 }
