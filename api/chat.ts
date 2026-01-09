@@ -39,9 +39,8 @@ export default async function handler(req: any, res: any) {
 async function processRequest(req: any) {
     const { messages, currentProfile } = req.body;
 
-    // Correction du chemin d'importation pour Vercel
-    // On essaie l'import relatif standard
-    const { SYSTEM_INSTRUCTION, DEFAULT_COURSE_CONTENT } = await import("../constants");
+    // Correction finale du chemin d'importation pour Vercel (utilisation de l'extension .js compilée)
+    const { SYSTEM_INSTRUCTION, DEFAULT_COURSE_CONTENT } = await import("../constants.js");
     let cacheName = null;
 
     // 1. KV CHECK
