@@ -265,6 +265,16 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
         throw new Error(data.error || `Erreur serveur ${response.status}`);
       }
 
+      if (data.status === "WARMING_UP") {
+        setIsLoading(false);
+        addMessageToSession(activeSessionId, {
+          role: 'model',
+          text: "C'est la première fois que je vous parle sur ce thème ! Je suis en train de charger mes dossiers juridiques (cela prend environ 10-15 secondes). \n\n**Veuillez renvoyer votre message dans un instant**, tout sera prêt ! 🏛️",
+          timestamp: new Date()
+        });
+        return;
+      }
+
       const aiText = data.text || "Désolée, je n'ai pas pu générer de réponse.";
 
       // ---------------------------------------------------------
