@@ -8,11 +8,16 @@ const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_
 const prefix = process.env.COURSE_ID ? `${process.env.COURSE_ID}_` : '';
 const cacheKey = `${prefix}active_cache_info`;
 
-const apiKey = process.env.API_KEY || process.env.VITE_API_KEY || process.env.GOOGLE_API_KEY;
+const apiKey = (process.env.API_KEY || process.env.VITE_API_KEY || process.env.GOOGLE_API_KEY || "").trim();
+
+// Export pour augmenter le timeout sur Vercel (limité à 10s sur Hobby, mais aide sur Pro)
+export const config = {
+    maxDuration: 60,
+};
 
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-    if (!apiKey) return res.status(500).json({ error: 'Clé API manquante' });
+    if (!apiKey) return res.status(500).json({ error: 'Clé API manquante ou invalide' });
 
     try {
         const { messages, currentProfile } = req.body;
