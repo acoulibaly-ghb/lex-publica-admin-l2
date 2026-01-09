@@ -5,7 +5,7 @@ import {
   FileText, Paperclip, Trash2, BookOpen, Scale,
   FileSignature, CheckCircle2, Circle, Trophy, LogOut, Search
 } from 'lucide-react';
-// On a supprim� l'import de @google/genai car le frontend ne parle plus directement � Google
+// On a supprimé l'import de @google/genai car le frontend ne parle plus directement à Google
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
@@ -37,7 +37,7 @@ const MermaidRenderer: React.FC<{ chart: string }> = ({ chart }) => {
 };
 
 interface TextChatProps {
-  courseContent: string; // Gard� pour compatibilit�, mais g�r� par le serveur maintenant
+  courseContent: string; // Gardé pour compatibilité, mais géré par le serveur maintenant
   systemInstruction: string; // Idem
   apiKey: string; // Idem
   themeColor?: string;
@@ -502,7 +502,7 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
       <div className={`absolute inset-y-0 left-0 z-30 flex flex-col w-72 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="p-4 border-b border-slate-200 dark:border-slate-800 flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <h3 className="font-serif font-bold text-slate-700 dark:text-slate-200">Mes R�visions</h3>
+            <h3 className="font-serif font-bold text-slate-700 dark:text-slate-200">Mes Révisions</h3>
             <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg"><PanelLeftClose size={20} /></button>
           </div>
           <button onClick={() => { createNewSession(); setIsSidebarOpen(false); }} className={`w-full flex items-center justify-center gap-2 px-4 py-3 ${colors.primary} text-white rounded-lg font-medium shadow-md transition-all active:scale-95`}><Plus size={18} /><span>Nouvelle Session</span></button>
@@ -631,4 +631,5 @@ export const TextChat: React.FC<TextChatProps> = ({ courseContent, systemInstruc
       )}
     </div>
   );
+
 };
