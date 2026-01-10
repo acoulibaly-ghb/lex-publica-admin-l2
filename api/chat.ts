@@ -57,7 +57,8 @@ async function processRequest(req: any) {
     }
 
     // 2. CACHE CREATION (AVEC FALLBACK)
-    const activeModel = "models/gemini-1.5-flash"; // On utilise le 1.5 qui est plus stable en cache
+    // On utilise 'gemini-1.5-flash-latest' pour maximiser la compatibilité et les quotas
+    const activeModel = "models/gemini-1.5-flash-latest";
 
     if (!cacheName) {
         try {
@@ -83,7 +84,7 @@ async function processRequest(req: any) {
                 });
             }
         } catch (cacheError: any) {
-            console.warn("⚠️ Caching non supporté, passage en mode standard:", cacheError.message);
+            console.warn("⚠️ Caching non supporté, passage en mode standard (Gemini 1.5 Latest):", cacheError.message);
             useFallback = true;
         }
     }
@@ -106,7 +107,7 @@ async function processRequest(req: any) {
             parts: [{ text: m.text }]
         }));
 
-    // SÉCURITÉ : Gemini exige que l'historique commence par un message 'user'
+    // SÉCURITÉ : Gemini exige que l'historique commence par 'user'
     while (history.length > 0 && history[0].role === 'model') {
         history.shift();
     }
@@ -131,7 +132,8 @@ async function processRequest(req: any) {
         });
     }
 
-    const input = history.length === 0 && !useFallback ? studentInfo + lastMsg.parts[0].text : lastMsg.parts[0].text;
+    // On s'assure que le contexte étudiant est présent si l'historique est vide
+    const input = (history.length === 0 || useFallback) ? studentInfo + lastMsg.parts[0].text : lastMsg.parts[0].text;
     const aiRes = await chat.sendMessage(input);
 
     return { text: aiRes.response.text(), cached: !!cacheName && !useFallback };
