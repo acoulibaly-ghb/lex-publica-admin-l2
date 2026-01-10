@@ -106,6 +106,11 @@ async function processRequest(req: any) {
             parts: [{ text: m.text }]
         }));
 
+    // SÉCURITÉ : Gemini exige que l'historique commence par un message 'user'
+    while (history.length > 0 && history[0].role === 'model') {
+        history.shift();
+    }
+
     const lastMsg = history.pop();
     if (!lastMsg) throw new Error("Aucun message utilisateur.");
 
