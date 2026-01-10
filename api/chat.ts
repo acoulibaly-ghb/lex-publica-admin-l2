@@ -39,9 +39,10 @@ export default async function handler(req: any, res: any) {
 async function processRequest(req: any) {
     const { messages, currentProfile } = req.body;
 
-    // Correction finale du chemin d'importation pour Vercel (utilisation de l'extension .js compilée)
+    // Correction du chemin d'importation pour Vercel
     const { SYSTEM_INSTRUCTION, DEFAULT_COURSE_CONTENT } = await import("../constants.js");
     let cacheName = null;
+    let useFallback = false;
 
     // 1. KV CHECK
     if (kvUrl && kvToken) {
@@ -55,38 +56,45 @@ async function processRequest(req: any) {
         } catch (e) { console.error("KV Error:", e); }
     }
 
-    // 2. CACHE CREATION (DYNAMIC IMPORT)
+    // 2. CACHE CREATION (AVEC FALLBACK)
+    const mainModel = "models/gemini-1.5-flash-001";
+    const fallbackModel = "models/gemini-2.0-flash"; // On tente le 2.0 s'il n'y a pas de cache
+
     if (!cacheName) {
-        const { GoogleAICacheManager } = await import("@google/generative-ai/server");
-        const cacheManager = new GoogleAICacheManager(apiKey);
+        try {
+            const { GoogleAICacheManager } = await import("@google/generative-ai/server");
+            const cacheManager = new GoogleAICacheManager(apiKey);
+            const combined = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}`;
 
-        // On évite la grosse concaténation si possible ou on la fait juste une fois
-        const combined = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}`;
-
-        const newCache = await cacheManager.create({
-            model: "models/gemini-1.5-flash",
-            displayName: `cache_${prefix || 'default'}`,
-            ttlSeconds: 3600,
-            contents: [{ role: "user", parts: [{ text: combined }] }],
-        });
-
-        cacheName = newCache.name;
-        const expiry = new Date(newCache.expireTime).getTime();
-
-        if (kvUrl && kvToken) {
-            await fetch(`${kvUrl}/set/${cacheKey}`, {
-                method: 'POST',
-                headers: { Authorization: `Bearer ${kvToken}` },
-                body: JSON.stringify({ name: cacheName, expiry })
+            const newCache = await cacheManager.create({
+                model: mainModel,
+                displayName: `cache_${prefix || 'default'}`,
+                ttlSeconds: 3600,
+                contents: [{ role: "user", parts: [{ text: combined }] }],
             });
+
+            cacheName = newCache.name;
+            const expiry = new Date(newCache.expireTime).getTime();
+
+            if (kvUrl && kvToken) {
+                await fetch(`${kvUrl}/set/${cacheKey}`, {
+                    method: 'POST',
+                    headers: { Authorization: `Bearer ${kvToken}` },
+                    body: JSON.stringify({ name: cacheName, expiry })
+                });
+            }
+        } catch (cacheError: any) {
+            console.warn("⚠️ Caching non supporté, passage en mode standard:", cacheError.message);
+            useFallback = true;
         }
     }
 
     // 3. AI RESPONSE
     const { GoogleGenerativeAI } = await import("@google/generative-ai");
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModelFromCachedContent(cacheName);
 
+    let model;
+    let chat;
     const studentInfo = currentProfile
         ? `[ÉTUDIANT : ${currentProfile.name} (ID: ${currentProfile.id})]\n`
         : "";
@@ -102,9 +110,23 @@ async function processRequest(req: any) {
     const lastMsg = history.pop();
     if (!lastMsg) throw new Error("Aucun message utilisateur.");
 
-    const input = history.length === 0 ? studentInfo + lastMsg.parts[0].text : lastMsg.parts[0].text;
-    const chat = model.startChat({ history });
+    if (cacheName && !useFallback) {
+        // Mode Optimisé (Cache)
+        model = genAI.getGenerativeModelFromCachedContent(cacheName);
+        chat = model.startChat({ history });
+    } else {
+        // Mode Standard (Fallback)
+        model = genAI.getGenerativeModel({ model: fallbackModel });
+        const fullContext = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}\n\n`;
+
+        chat = model.startChat({
+            history: history,
+            systemInstruction: fullContext
+        });
+    }
+
+    const input = history.length === 0 && !useFallback ? studentInfo + lastMsg.parts[0].text : lastMsg.parts[0].text;
     const aiRes = await chat.sendMessage(input);
 
-    return { text: aiRes.response.text() };
+    return { text: aiRes.response.text(), cached: !!cacheName && !useFallback };
 }
