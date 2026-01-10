@@ -116,12 +116,14 @@ async function processRequest(req: any) {
         chat = model.startChat({ history });
     } else {
         // Mode Standard (Fallback)
-        model = genAI.getGenerativeModel({ model: fallbackModel });
         const fullContext = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}\n\n`;
+        model = genAI.getGenerativeModel({
+            model: fallbackModel,
+            systemInstruction: fullContext
+        });
 
         chat = model.startChat({
-            history: history,
-            systemInstruction: fullContext
+            history: history
         });
     }
 
