@@ -57,8 +57,7 @@ async function processRequest(req: any) {
     }
 
     // 2. CACHE CREATION (AVEC FALLBACK)
-    const mainModel = "models/gemini-1.5-flash-001";
-    const fallbackModel = "models/gemini-2.0-flash"; // On tente le 2.0 s'il n'y a pas de cache
+    const activeModel = "models/gemini-1.5-flash"; // On utilise le 1.5 qui est plus stable en cache
 
     if (!cacheName) {
         try {
@@ -67,7 +66,7 @@ async function processRequest(req: any) {
             const combined = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}`;
 
             const newCache = await cacheManager.create({
-                model: mainModel,
+                model: activeModel,
                 displayName: `cache_${prefix || 'default'}`,
                 ttlSeconds: 3600,
                 contents: [{ role: "user", parts: [{ text: combined }] }],
@@ -118,7 +117,7 @@ async function processRequest(req: any) {
         // Mode Standard (Fallback)
         const fullContext = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}\n\n`;
         model = genAI.getGenerativeModel({
-            model: fallbackModel,
+            model: activeModel,
             systemInstruction: fullContext
         });
 
