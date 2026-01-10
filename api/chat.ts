@@ -64,7 +64,7 @@ async function processRequest(req: any) {
         const combined = `INSTRUCTIONS : ${SYSTEM_INSTRUCTION}\n\nCOURS : ${DEFAULT_COURSE_CONTENT}`;
 
         const newCache = await cacheManager.create({
-            model: "models/gemini-1.5-flash-001",
+            model: "models/gemini-1.5-flash",
             displayName: `cache_${prefix || 'default'}`,
             ttlSeconds: 3600,
             contents: [{ role: "user", parts: [{ text: combined }] }],
